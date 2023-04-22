@@ -23,7 +23,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link href="assets/vendor/plugins/css/sweetalert.css" rel="stylesheet" >
   <!--Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -232,8 +232,8 @@
                 </p>
               </div>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/inventorySystem/ims.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="See More Photos"><i class="bi bi-image"></i></a>
-                <a href="#" title="Read More Details"><i class="bi bi-book"></i></i></a>
+                <a href="assets/img/portfolio/inventorySystem/ims.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="My first successfull big project."><i class="bi bi-image"></i></a>
+                <a href="#" class="modalReadMoreBtn" title="Read More Details"><i class="bi bi-book"></i></i></a>
               </div>
             </div>
           </div>
@@ -247,8 +247,8 @@
                 </p>
               </div>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/inventorySystem/sims.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="See More Photos"><i class="bi bi-image"></i></a>
-                <a href="#" title="Read More Details"><i class="bi bi-book"></i></i></a>
+                <a href="assets/img/portfolio/studentInformationSystem/sims.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="This system is under the development."><i class="bi bi-image"></i></a>
+                <a href="#" class="modalReadMoreBtn" title="Read More Details"><i class="bi bi-book"></i></i></a>
               </div>
             </div>
           </div>
@@ -297,33 +297,29 @@
             </div>
 
           </div>
-
+          <!-- action="/" method="/" action="assets/src/email.controller.php" -->
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="assets/src/email.controller.php" method="POST" role="form" class="php-email-form">
+            <div id="error"></div>
+            <form action="/" method="/" id="form" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+                  <input type="text" name="name" class="form-control" id="name">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control" name="email" id="email">
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
+                <input type="text" class="form-control" name="subject" id="subject">
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="10"></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit" disabled>Send Message</button></div>
+              <div class="text-center"><button type="submit" id="submit">Send Message</button></div>
             </form>
           </div>
 
@@ -345,7 +341,30 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <div class="modal-handler">
+    <div id="readMore" class="modal fade" role="dialog"><br/><br/><br/>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" style="background: transparent; border: none;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <center>
+              <h4 class="text-center text-danger">OOOPPSS!</h4>
+              <img src="assets/img/underdevelopment.png" width=300 class="img-responsive"/>
+              <h5 class="text-danger text-center">THIS FEATURES IS UNDER DEVELOPMENT.</h5>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Vendor JS Files -->
+  <script src="assets/vendor/plugins/js/jquery.min.js"></script>
+  <script src="assets/vendor/plugins/js/sweetalert.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -354,15 +373,78 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/plugins/js/jquery.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
   <!-- Custom Script-->
-  <script defer>
+  <script type="text/javascript">
     $(document).ready(function() {
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+      //validate form
+      $('#submit').on("click", function(event) {
+        event.preventDefault();
+        const name = $('#name').val();
+        const email = $('#email').val();
+        const subject = $('#subject').val();
+        const message = $('#message').val();
+
+        if(name === '' || email === '' || subject === '' || message === '') {
+          swal({
+            title: "Opsss!",
+            text: "All fields are required",
+            type: "info",
+            confirmButtonColor: "#149ddd"
+          });
+        } else {
+          swal({
+            title: "Confirm",
+            text: "Kindly verify that the login credentials you have entered are accurate.",
+            type: "info",
+            confirmButtonText: "Okay",
+            confirmButtonColor: "#149ddd",
+            showCancelButton: true,
+            cancelButtonText: "Cancel",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+            showLoaderOnConfirm: true
+          },
+            function(isConfirm) {
+              if(isConfirm) {
+                setTimeout(function () {
+                  swal({
+                    title: "Send Successfully",
+                    text: "Thankyou for submiting your email!",
+                    type: "success",
+                    confirmButtonColor: "#149ddd",
+                  },
+                  function() {
+                    window.location = "index";
+                  });
+                }, 3000);
+              } else {
+                swal({
+                  title: "Cancel",
+                  text: "Cancel successfully!",
+                  type: "error",
+                  confirmButtonColor: "#149ddd",
+                });
+              }   
+            }
+          );
+        }
+      });
+
+
+
+
+      //open modal
+      $('.modalReadMoreBtn').on("click", function(e) {
+        e.preventDefault();
+        $('#readMore').modal('show');
+      });
+      //close modal
+      $('.close').on("click", function () {
+        $('#readMore').modal('hide');
       });
     });
   </script>
