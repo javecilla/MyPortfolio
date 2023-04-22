@@ -10,10 +10,10 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# check for file in directory with .php extension
+# check for file in directory with .html extension
 
-RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteCond %{REQUEST_FILENAME}\.html -f 
 
-# here we actually show the page that has the .php extension
+# here we actually show the page that has the .html extension
 
-RewriteRule ^(.*)$ $1.php [NC,L]
+RewriteRule ^(.*)$ $1.html [NC,L]
