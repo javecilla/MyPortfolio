@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio</title>
+  <title>Jerome Avecilla | Portfolio</title>
   <meta content="Portfolio" name="description">
   <meta content="Jerome Avecilla" name="author">
 
@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-<!-- sss -->
+  <!-- sss -->
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!--Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -40,7 +40,7 @@
 
       <div class="profile">
         <img src="assets/img/sidebar.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Jerome Avecilla</a></h1>
+        <h1 class="text-light"><a href="index">Jerome Avecilla</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://twitter.com/itsjzerome_" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/jerome.avecilla24" class="facebook">
@@ -69,8 +69,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>Hello World!</h1>
-      <p>I am <span class="typed" data-typed-items="Jerome Avecilla"></span></p>
+      <h1>Welcome!</h1>
+      <p>Hi, i'm <span class="typed" data-typed-items="Jerome Avecilla"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -100,20 +100,19 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>jeromesavc@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(+63) 977 2465 533</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>Pandi, Bulacan</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <!-- <ul>
+                <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>18</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Strand:</strong> <span>TVL-ICT</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Grade:</strong> <span>Grade 12 -Senior High School</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul> -->
+                </ul> 
               </div>
             </div>
             <p>
-              As an avid coder, I devote significant time to practicing and studying various aspects of coding related on web development. Additionally, I enjoy PC gaming with a particular interest in League of Legends and Valorant, and mobile gaming with a focus on Wildrift. Please feel free to connect with me on Facebook to schedule a gaming session together.
+              As a passionate coder, I invest a considerable amount of time honing my skills and expanding my knowledge in various aspects of web development. Since embarking on my journey in 2020, I have become proficient in HTML, CSS, and JavaScript. I am dedicated to continuously learning and growing in the field, and am excited to bring my expertise to your project.
             </p>
           </div>
         </div>
@@ -122,7 +121,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <!-- <section id="facts" class="facts">
+<!--     <section id="facts" class="facts">
       <div class="container">
 
         <div class="section-title">
@@ -199,9 +198,16 @@
             </div>
 
             <div class="progress">
-              <span class="skill">JavaScript <i class="val">55%</i></span>
+              <span class="skill">JavaScript <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Frameworks[Jquery, Bootstrap] <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
@@ -210,7 +216,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
             <div class="progress">
-              <span class="skill">PHP <i class="val">60%</i></span>
+              <span class="skill">PHP <i class="val">65%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -224,7 +230,14 @@
             </div>
 
             <div class="progress">
-              <span class="skill">Frameworks[Jquery, Bootstrap] <i class="val">50%</i></span>
+              <span class="skill">Api<i class="val">20%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Git <i class="val">50%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -304,21 +317,22 @@
     </section> --><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Projects</h2>
+          <p>
+            Displayed below are my diverse portfolio of projects, including academic, personal, and large-scale endeavors. Take a closer look to witness my range of skills and expertise.
+          </p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
               <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">App</li>
             </ul>
           </div>
         </div>
@@ -330,17 +344,22 @@
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="portfolio-details" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/inventorySystem/ims.png" class="img-fluid" alt="">
+              <div class="details"> 
+                <p spellcheck="true">
+                  This software is comprehensive project aimed at managing the inventory of tools and equipment. It provides...See more
+                </p>
+              </div>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/portfolio/inventorySystem/ims.png" data-gallery="portfolioGallery" class="portfolio-lightbox" data-toggle="tooltip" data-placement="left" title="See More Photos"><i class="bi bi-image"></i></a>
+                <a href="portfolio-details" data-toggle="tooltip" data-placement="left" title="Read More Details"><i class="bi bi-book"></i></i></a>
               </div>
             </div>
           </div>
@@ -350,75 +369,14 @@
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="portfolio-details" data-toggle="tooltip" data-placement="left" title="Read More"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
-    </section> --><!-- End Portfolio Section -->
+    </section> <!-- End Portfolio Section -->
 
     <!-- ======= Services Section ======= -->
     <!-- <section id="services" class="services">
@@ -644,10 +602,17 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Custom Script-->
+  <script defer>
+    $(document).ready(function() {
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    });
+  </script>
 
 </body>
 

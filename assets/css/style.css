@@ -1,4 +1,22 @@
+/*customizing default scroll bar*/
+::-webkit-scrollbar {
+  width: 12px; 
+}
 
+::-webkit-scrollbar-track {  
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 1px; 
+}
+ 
+::-webkit-scrollbar-thumb {  
+  background: #cecece!important; 
+  border-radius: 1px;
+  cursor: -webkit-grab; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cecece!important; 
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
