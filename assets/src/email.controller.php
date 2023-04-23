@@ -17,7 +17,7 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 		$mail = new PHPMailer();
 
 		//enable verbose debug output
-		$mail->SMTPDebug = 2;
+		$mail->SMTPDebug = 3;
 		$mail->Debugoutput = 'html';
 
 		//stmp settings
@@ -30,7 +30,7 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 		// $mail->SMTPAuth = true;
 		
 		//for live
-		$mail->Host ="tls://smtp.gmail.com"; 
+		$mail->Host ="smtp.gmail.com"; 
 		$mail->Port = 587; 
 		$mail->SMTPSecure = 'tls'; 
 		$mail->SMTPAuth = true;
