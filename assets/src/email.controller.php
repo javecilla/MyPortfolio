@@ -22,9 +22,17 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 
 		//stmp settings
 		$mail->isSMTP();
-		$mail->Host ="ssl://smtp.gmail.com";
-		$mail->Port = 465;
-		$mail->SMTPSecure = 'ssl';
+
+		//for local
+		// $mail->Host ="ssl://smtp.gmail.com"; 
+		// $mail->Port = 465; 
+		// $mail->SMTPSecure = 'ssl'; 
+		// $mail->SMTPAuth = true;
+		
+		//for live
+		$mail->Host ="tls://smtp.gmail.com"; 
+		$mail->Port = 587; 
+		$mail->SMTPSecure = 'tls'; 
 		$mail->SMTPAuth = true;
 
 		//retrieve credentials
