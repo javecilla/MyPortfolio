@@ -387,54 +387,87 @@
         const email = $('#email').val();
         const subject = $('#subject').val();
         const message = $('#message').val();
-
-        if(name === '' || email === '' || subject === '' || message === '') {
+        //validate input
+        if(isFieldEmpty(name) || isFieldEmpty(email) || isFieldEmpty(subject) || isFieldEmpty(message)) {
+          //alert('All fields are required!');
           swal({
             title: "Opsss!",
             text: "All fields are required",
             type: "info",
             confirmButtonColor: "#149ddd"
           });
-        } else {
-          swal({
-            title: "Confirm",
-            text: "Kindly verify that the credentials you have entered are accurate.",
-            type: "info",
-            confirmButtonText: "Okay",
-            confirmButtonColor: "#149ddd",
-            showCancelButton: true,
-            cancelButtonText: "Cancel",
-            closeOnConfirm: false,
-            closeOnCancel: false,
-            showLoaderOnConfirm: true
-          },
-            function(isConfirm) {
-              if(isConfirm) {
-                setTimeout(function () {
+        } 
+        else { 
+          if(!isValidEmail(email)) {
+            //alert('Email is not valid');
+            swal({
+              title: "Opsss!",
+              text: "Please enter a valid email address",
+              type: "info",
+              confirmButtonColor: "#149ddd"
+            });
+          } 
+          else {
+            swal({
+              title: "Confirm",
+              text: "Kindly verify that the credentials you have entered are accurate.",
+              type: "info",
+              confirmButtonText: "Okay",
+              confirmButtonColor: "#149ddd",
+              showCancelButton: true,
+              cancelButtonText: "Cancel",
+              closeOnConfirm: false,
+              closeOnCancel: false,
+              showLoaderOnConfirm: true
+            },
+              function(isConfirm) { //check if choose confirm
+                if(isConfirm) {
+                  $.ajax({ //send ajax request to the server
+                    url: "assets/src/email.controller.php",
+                    method: "POST",
+                    data: {
+                      name: name,
+                      email: email,
+                      subject: subject,
+                      message: message
+                    },
+                    success: function(response) {
+                      setTimeout(function () {
+                        swal({
+                          title: "Send Successfully",
+                          text: "Thankyou for submiting your email!",
+                          type: "success",
+                          confirmButtonColor: "#149ddd"
+                        },
+                        function() {
+                          //console.log(response);
+                          $('#form')[0].reset();
+                        });
+                      }, 1000);
+                    }
+                  }); 
+                } else { //if cancel
                   swal({
-                    title: "Send Successfully",
-                    text: "Thankyou for submiting your email!",
-                    type: "success",
-                    confirmButtonColor: "#149ddd",
-                  },
-                  function() {
-                    window.location = "index";
+                    title: "Cancel",
+                    text: "Cancel successfully!",
+                    type: "error",
+                    confirmButtonColor: "#149ddd"
                   });
-                }, 3000);
-              } else {
-                swal({
-                  title: "Cancel",
-                  text: "Cancel successfully!",
-                  type: "error",
-                  confirmButtonColor: "#149ddd",
-                });
-              }   
-            }
-          );
+                }   
+              }
+            );
+          }
         }
       });
 
+      function isFieldEmpty(field) {
+        return field === '';
+      }
 
+      function isValidEmail(email) {
+        const emailRegex = /\S+@\S+\.\S+/;
+        return emailRegex.test(email);
+      }
 
 
       //open modal
