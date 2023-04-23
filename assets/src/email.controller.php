@@ -21,7 +21,7 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 		$mail->Debugoutput = 'html';
 
 		//stmp settings
-		$mail->isSMTP();
+		//$mail->isSMTP();
 
 		//for local
 		// $mail->Host ="ssl://smtp.gmail.com"; 
