@@ -17,21 +17,11 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 			//create a new object
 			$mail = new PHPMailer();
 
-<<<<<<< HEAD
-			//enable verbose debug output
-			$mail->SMTPDebug = 2;
-			$mail->Debugoutput = 'html';
-
 			//stmp settings
 			$mail->isSMTP();
-=======
-		//enable verbose debug output
-		$mail->SMTPDebug = 3;
-		$mail->Debugoutput = 'html';
-
-		//stmp settings
-		//$mail->isSMTP();
->>>>>>> ced6647adf84b4c1ef9fa2ef9e1bdd6f75147305
+			//enable verbose debug output
+			$mail->SMTPDebug = 3;
+			$mail->Debugoutput = 'html';
 
 			//for local
 			// $mail->Host ="ssl://smtp.gmail.com"; 
@@ -78,52 +68,8 @@ if(isset($_POST['name']) && isset($_POST['email'])) {
 		} else {
 			throw new Exeption("Invalid email address");
 		}
-		
-<<<<<<< HEAD
-	} catch(Exeption $e) {
+	} catch(Exception $e) {
 		echo "An error occured: " . $e->getMessage();
-	}	
-=======
-		//for live
-		$mail->Host ="smtp.gmail.com"; 
-		$mail->Port = 587; 
-		$mail->SMTPSecure = 'tls'; 
-		$mail->SMTPAuth = true;
-
-		//retrieve credentials
-		$mail->Username = EMAIL;
-		$mail->Password = PASS;
-
-		//email settings
-		$mail->isHTML(true);
-		$mail->ContentType = 'text/plain';
-		$mail->CharSet ="utf-8";
-
-		$mail->setFrom($email, $name);
-		$mail->addAddress(EMAIL);
-		$mail->Subject = ("$email ($subject)");
-		$mail->Body = $message;
-
-		//for debugging for purpose
-    $mail->SMTPOptions = array(
-      'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-      )
-    );
-
-    //check mailing
-    if($mail->send()){
-    	//echo "Email sent successfully!";
-    } else {
-    	echo "Failed to send email: " . $mail->ErrorInfo;
-    }
-
-	} else {
-		echo "Invalid Email address";
 	}
->>>>>>> ced6647adf84b4c1ef9fa2ef9e1bdd6f75147305
 }
-
 ?>
